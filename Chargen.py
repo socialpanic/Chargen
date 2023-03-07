@@ -2,10 +2,40 @@ import random
 
 GENDERS = ["Male", "Female"]
 RACES = [
-    "Human","Dwarf","Elf","Halfling","Gnome","Orc","Half Elf","Half Orc"
+    "Human","Dwarf","Elf","Orc","Gnome","Tainted","Touched","Half-Orc","Half-Elf","Goblins","Drakkin","Dampyrs"
 ]
+
+ALIGNMENT = [
+   "Lawful",
+   "Neurtal",
+   "Chatoic"
+]
+
+SKILLS = [
+  "Swim (str)",
+  "Jump (str)",
+  "Climb (str)",
+  "Reflexes (dex)",
+  "Stealth (dex)",
+  "Riding (dex)",
+  "Survival (con)",
+  "Resistance (con)",
+  "Concentration (con)",
+  "Spellcraft (int)",
+  "Lore (int)",
+  "Languages (int)",
+  "Religion (wis)",
+  "Perception (wis)",
+  "Discipline (wis)",
+  "Diplomacy (cha)",
+  "Leadership (cha)",
+  "Deception (cha)",
+]
+
 VALUES = [
     "Community",
+    "Adventure",
+    "Charity",
     "Family",
     "Honesty",
     "Rule of Law",
@@ -14,17 +44,15 @@ VALUES = [
     "Travel",
     "Reputation",
     "Knowledge",
-    "Relgion / Dogma",
-    "Pleasure",
+    "Religion",
     "Humor",
     "Leadership",
     "Peace",
-    "Pleasure / Vice",
-    "Political Idiology",
+    "Vice",
+    "Political Ideology",
     "Wealth",
-    "Own Ass",
-    "Dignity",
-    "Culture / Ethnicity",
+    "Themselves",
+    "Culture"
 ]
 
 MONTHS = [
@@ -41,49 +69,82 @@ MONTHS = [
     "Harth",
     "Deus",
 ]
+
+VALUE1 = random.choice(VALUES)
+VALUES.remove(VALUE1)
+VALUE2 = random.choice(VALUES)
+VALUES.remove(VALUE2)
+VALUE3 = random.choice(VALUES)
+VALUES.remove(VALUE3)
+
+SCORN1 = random.choice(VALUES)
+VALUES.remove(SCORN1)
+SCORN2 = random.choice(VALUES)
+VALUES.remove(SCORN2)
+SCORN3 = random.choice(VALUES)
+VALUES.remove(SCORN3)
+
 DEADORALIVE = ["Dead", "Alive"]
+PARENTALHERITAGE1 = random.choice(RACES)
+PARENTALHERITAGE2 = random.choice(RACES)
 RACE = random.choice (RACES)
 GENDER = random.choice (GENDERS)
 DOB_MONTH_DAY = str(random.choice (MONTHS)) +" "+str(random.randrange(1,30))
-STR = random.randrange(3,18)
-DEX = random.randrange(3,18)
-INT = random.randrange(3,18)
-WIS = random.randrange(3,18)
-CON = random.randrange(3,18)
-CHA = random.randrange(3,18)
-HP = random.randrange(1,8)
-COIN = random.randrange(6, 36)
+STR = random.randrange(3,19)
+DEX = random.randrange(3,19)
+INT = random.randrange(3,19)
+WIS = random.randrange(3,19)
+CON = random.randrange(3,19)
+CHA = random.randrange(3,19)
+HP = random.randrange(1,9)
+COIN = random.randrange(3,181)
 
-AGE = 0
-if RACE == "Human":
-    AGE = random.randrange(15,20)
-if RACE == "Dwarf":
-    AGE = random.randrange(40,60)
+SIBLINGS = []
+NO_OF_SIBS = random.randint(0,6)
+SIBAGE = [
+    "Younger",
+    "Older"
+]
+SIBGENDER = [
+    "Brother",
+    "Sister"
+]
+
+for s in range(NO_OF_SIBS):
+    young_or_old = random.choice(SIBAGE)
+    brother_or_sister = random.choice(SIBGENDER)
+    alive_or_dead = random.choice(DEADORALIVE)
+    sib = young_or_old+" "+brother_or_sister+" "+alive_or_dead
+    SIBLINGS.append(sib)
+
+'''AGE = 0
 if RACE == "Elf":
-    AGE = random.randrange(90,110)
-if RACE == "Orc":
-    AGE = random.randrange(13,19)
-if RACE == "Halfling":
-    AGE = random.randrange(20,30)
-if RACE == "Gnome":
-    AGE = random.randrange(40,60)
-if RACE == "Half Elf":
-    AGE = random.randrange(15,20)
-if RACE == "Half Orc":
-    AGE = random.randrange(15,20)
+    AGE = random.randrange(114,134)
+elif RACE == "Dwarf":
+    AGE = random.randrange(43,58)
+elif RACE == "Human":
+    AGE = random.randrange(14,20)
+elif RACE == "Orc":
+    AGE = random.randrange(14,20)
+elif RACE == "Gnome":
+    AGE = random.randrange(44,64)
+elif RACE == "Halfling":
+    AGE = random.randrange(22,28)
+elif RACE == "Half-Orc":
+    AGE = random.randrange(14,20)
+elif RACE == "Half-Elf":
+    AGE = random.randrange(20,26)'''
 
 
 print("==========================================================================================")
-print("Race: "+RACE+"   "+"Gender: "+GENDER+"   "+"DOB: "+str(DOB_MONTH_DAY) +", "+str(1986-AGE)+" A.F.    "+"Age: "+str(AGE))
+print("Race: "+RACE+"   ""Alignment: "+str(random.choice(ALIGNMENT))+"   "+ "Gender: "+GENDER+"   "+"DOB: "+str(DOB_MONTH_DAY))
 print("HP: "+str(HP)+"     "+"COIN: "+str(COIN))
-print("STR: "+str(STR))
-print("DEX: "+str(DEX))
-print("INT: "+str(INT))
-print("WIS: "+str(WIS))
-print("CON: "+str(CON))
-print("CHA: "+str(CHA))
-print("Mother: "+str(random.choice(DEADORALIVE)))
-print("Father: "+str(random.choice(DEADORALIVE)))
-print("Values: "+str(random.choice(VALUES))+", "+str(random.choice(VALUES))+", "+str(random.choice(VALUES)))
-print("Scorns: "+str(random.choice(VALUES))+", "+str(random.choice(VALUES))+", "+str(random.choice(VALUES)))
+print("STR: "+str(STR)+"    "+"DEX: "+str(DEX)+"    "+"INT: "+str(INT)+"    "+"WIS: "+str(WIS)+"    "+"CON: "+str(CON)+"    "+"CHA: "+str(CHA))
+print("Father: "+str(random.choice(DEADORALIVE)) + "    "+"Mother: "+str(random.choice(DEADORALIVE)))
+print("Siblings: "+str(NO_OF_SIBS))
+for s in SIBLINGS:
+    print(s)
+print("Values: "+VALUE1+", "+VALUE2+", "+VALUE3)
+print("Scorns: "+SCORN1+", "+SCORN2+", "+SCORN3)
+print("Skills: "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS)))
 print("==========================================================================================")
