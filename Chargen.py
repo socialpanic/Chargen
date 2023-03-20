@@ -145,22 +145,10 @@ elif RACE == "Half-Elf":
     AGE = random.randrange(20,26)'''
 
 
-print("==========================================================================================")
-print("Race: "+RACE+"   ""Alignment: "+str(random.choice(ALIGNMENT))+"   "+ "Gender: "+GENDER+"   "+"DOB: "+str(DOB_MONTH_DAY))
-print("HP: "+str(HP)+"     "+"COIN: "+str(COIN))
-print("STR: "+str(STR)+"    "+"DEX: "+str(DEX)+"    "+"INT: "+str(INT)+"    "+"WIS: "+str(WIS)+"    "+"CON: "+str(CON)+"    "+"CHA: "+str(CHA))
-print("Father: "+str(random.choice(DEADORALIVE)) + "    "+"Mother: "+str(random.choice(DEADORALIVE)))
-print("Siblings: "+str(NO_OF_SIBS))
-for s in SIBLINGS:
-    print(s)
-print("Values: "+VALUE1+", "+VALUE2+", "+VALUE3)
-print("Scorns: "+SCORN1+", "+SCORN2+", "+SCORN3)
-print("Skills: "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS)))
-print("==========================================================================================")
 
-'''
+
+
 import random
-
 GENDERS = ["Male", "Female"]
 RACES = [
     "Human",
@@ -177,28 +165,29 @@ RACES = [
 ]
 CLASSES = [
     "Bard",
+    "Assassin",
     "Barbarian",
     "Fighter",
     "Cleric",
-    "Thief",
-    "Magic-User",
+    "Inquisitor"
     "Druid",
+    "Priest",
+    "Thief",
     "Monk",
-    "Sorcerer",
     "Paladin",
     "Ranger",
-    "Illusionist"
-    "Necromancer"
+    "Magic-User",
+    "Warlock",    
+    "Necromancer",
+    "Sorcerer",
+   
 ]
-
 VALUES = [
     "Community", "Family", "Honesty", "Rule of Law", "Power", "Love", "Travel", "Reputation", "Knowledge", "Relgion", "Vice", "Humor", "Leadership", "Peace", "Political Idiology", "Wealth", "Own Ass", "Dignity", "Culture",
 ]
-
 ALIGNMENTS = [
     "Lawful", "Neutal", "Chaotic"
 ]
-
 HAIRCOLORS = [
     "Black",
     "Brown",
@@ -206,7 +195,6 @@ HAIRCOLORS = [
     "Blonde"
     "None"
 ]
-
 PERSONAS = [
     'Friendly',
     'Grumpy',							
@@ -238,14 +226,12 @@ HAIRLENGTHS = [
     "Long",
     "Short"
 ]
-
 HAIRSTYLES = [
     "Wavey",
     "Straight",
     "Braided",
     "Poney Tail"
 ]
-
 MONTHS = [
     "Justicar",
     "Fairah",
@@ -283,7 +269,6 @@ if STR == 16 or STR == 17:
     STRMOD = 2
 if STR == 18:
     STRMOD = 3
-
 DEX = random.randrange(3,19)
 DEXMOD = 0
 if DEX == 3:
@@ -298,7 +283,6 @@ if DEX == 16 or DEX == 17:
     DEXMOD = 2
 if STR == 18:
     DEXMOD = 3
-
 INT = random.randrange(3,19)
 INTMOD = 0
 if INT == 3:
@@ -313,7 +297,6 @@ if INT == 16 or INT == 17:
     INTMOD = 2
 if INT == 18:
     INTMOD = 3
-
 WIS = random.randrange(3,19)
 WISMOD = 0
 if WIS == 3:
@@ -328,7 +311,6 @@ if WIS == 16 or WIS == 17:
     WISMOD = 2
 if WIS == 18:
     WISMOD = 3
-
 CON = random.randrange(3,19)
 CONMOD = 0
 if CON == 3:
@@ -343,7 +325,6 @@ if CON == 16 or CON == 17:
     CONMOD = 2
 if CON == 18:
     CONMOD = 3
-
 CHA = random.randrange(3,19)
 CHAMOD = 0
 if CHA == 3:
@@ -358,10 +339,7 @@ if CHA == 16 or CHA == 17:
     CHAMOD = 2
 if CHA == 18:
     CHAMOD = 3
-
 COIN = random.randrange(3, 180)
-
-
 if CLASS == "Fighter":
     HP = random.randrange(1,9)+CONMOD
 if CLASS == "Cleric":
@@ -384,26 +362,16 @@ if CLASS == "Bard":
     HP = random.randrange(1,5)+CONMOD
 if CLASS == "Barbarian":
     HP = random.randrange(1,10)+CONMOD
-if CLASS == "Illusionist":
+if CLASS == "Warlock":
     HP = random.randrange(1,5)+CONMOD
-
-'''AGE = 0
-if RACE == "Human":
-    AGE = random.randrange(15,20)
-if RACE == "Dwarf":
-    AGE = random.randrange(40,60)
-if RACE == "Elf":
-    AGE = random.randrange(90,110)
-if RACE == "Orc":
-    AGE = random.randrange(13,19)
-if RACE == "Halfling":
-    AGE = random.randrange(20,30)
-if RACE == "Gnome":
-    AGE = random.randrange(40,60)
-if RACE == "Half Elf":
-    AGE = random.randrange(15,20)
-if RACE == "Half Orc":
-    AGE = random.randrange(15,20)'''
+if CLASS == "Inquisitor":
+    HP = random.randrange(1,5)+CONMOD
+if CLASS == "Priest":
+    HP = random.randrange(1,5)+CONMOD
+if CLASS == "Necromancer":
+    HP = random.randrange(1,5)+CONMOD
+if CLASS == "Assassin":
+    HP = random.randrange(1,5)+CONMOD
 
 VALUE1 = random.choice(VALUES)
 VALUES.remove(VALUE1)
@@ -422,12 +390,10 @@ PERSONAINDEX = random.randrange(1,13)
 PERSONA1 = PERSONAS[PERSONAINDEX]
 del PERSONAS[PERSONAINDEX]
 del PERSONAS[PERSONAINDEX+1]
-
 PERSONAINDEX = random.randrange(1,13)
 PERSONA2 = PERSONAS[PERSONAINDEX]
 del PERSONAS[PERSONAINDEX]
 del PERSONAS[PERSONAINDEX+1]
-
 PERSONAINDEX = random.randrange(1,13)
 PERSONA3 = PERSONAS[PERSONAINDEX]
 del PERSONAS[PERSONAINDEX]
@@ -436,25 +402,10 @@ del PERSONAS[PERSONAINDEX+1]
 DeathSave = 0
 WandSave = 0
 ParalysisSave = 0
-Brath = 0
-Spells = 0
+BrathSave = 0
+SpellSave = 0
 
 MORALE = 9 + CONMOD
-
-    "Bard",
-    "Barbarian",
-    "Fighter",
-    "Cleric",
-    "Thief",
-    "Magic-User",
-    "Druid",
-    "Monk",
-    "Sorcerer",
-    "Paladin",
-    "Ranger",
-    "Illusionist"
-    "Necromancer"
-
 
 FighterClasses = [
     'Fighter',
@@ -462,41 +413,64 @@ FighterClasses = [
     'Ranger',
     'Barbarian'
 ]
-
 ThiefClasses = [
     'Thief',
     'Bard',
     'Monk',
     'Assassin'
 ]
-
 MageClasses = [
     'Magic-user',
     'Sorcerer',
     'Necromancer',
     'Warlock'
 ]
-
 ClericClasses = [
     'Ceric',
     'Druid',
     'Priest',
     'Inquisitor'
 ]
-print("==========================================================================================")
-print("Race: "+RACE+" Class: "+CLASS+  " Gender: "+GENDER+"  ALIGNMENT: "+ALIGNMENT+ "    MORALE: "+str(MORALE))
-print("HP: "+str(HP)+"     "+"COIN: "+str(COIN)+ "    Hair: "+HAIRLENGTH+" "+HAIRCOLOR+" and "+HAIRSTYLE) 
-print("STR: "+str(STR) +" " +str(STRMOD) + "              Death: ")   
-print("DEX: "+str(DEX) +" " +str(DEXMOD) + "              Wands: ")
-print("INT: "+str(INT) +" " +str(INTMOD) + "              Paralysis: ")
-print("WIS: "+str(WIS) +" " +str(WISMOD) + "              Breath: ")
-print("CON: "+str(CON) +" " +str(CONMOD) + "              Spels: ")
-print("CHA: "+str(CHA) +" " +str(CHAMOD))
-print("Mother: "+str(random.choice(DEADORALIVE)))
-print("Father: "+str(random.choice(DEADORALIVE)))
-print("Values: "+str(VALUE1)+", "+str(VALUE2)+", "+str(VALUE3))
-print("Scorns: "+str(SCORN1)+", "+str(SCORN2)+", "+str(SCORN3))
-print("Persona: "+str(PERSONA1)+", "+str(PERSONA2)+", "+str(PERSONA3))
-print("==========================================================================================")
 
-'''
+if CLASS in FighterClasses:
+    DeathSave = 12
+    WandSave = 13
+    ParalysisSave = 14
+    BrathSave = 15
+    SpellSave = 17
+
+if CLASS in ThiefClasses:
+    DeathSave = 13
+    WandSave = 14
+    ParalysisSave = 13
+    BrathSave = 16
+    SpellSave = 15
+
+if CLASS in MageClasses:
+    DeathSave = 13
+    WandSave = 14
+    ParalysisSave = 13
+    BrathSave = 16
+    SpellSave = 15
+
+if CLASS in ClericClasses:
+    DeathSave = 11
+    WandSave = 12
+    ParalysisSave = 14
+    BrathSave = 16
+    SpellSave = 15
+
+print("==========================================================================================")
+print("Race: "+RACE+" Class: "+CLASS+" Gender: "+GENDER+"  Alignment: "+str(random.choice(ALIGNMENT))+"DOB: "+str(DOB_MONTH_DAY))
+print("HP: "+str(HP)+"     "+"COIN: "+str(COIN)+ "    Hair: "+HAIRLENGTH+" "+HAIRCOLOR+" and "+HAIRSTYLE)
+print("STR: "+str(STR)+"("+str(STRMOD)+")"+"  DEX: "+str(DEX)+" ("+str(DEXMOD)+")"+"  INT: "+str(INT)+" ("+str(INTMOD)+")"+"  WIS: "+str(WIS)+" ("+str(WISMOD)+")"+"  CON: "+str(CON)+" ("+str(CONMOD)+")"+"  CHA: "+str(CHA)+" ("+str(CHAMOD)+")")
+print("Saves: Death: "+str(DeathSave)+"  Wands: "+str(WandSave)+"  Paralysis: "+str(ParalysisSave)+"  Breath: "+str(BrathSave)+"  Spells: "+str(SpellSave)+"")
+print("Father: "+str(random.choice(DEADORALIVE)) + "    "+"Mother: "+str(random.choice(DEADORALIVE)))
+print("Siblings: "+str(NO_OF_SIBS))
+for s in SIBLINGS:
+    print(s)
+print("Values: "+VALUE1+", "+VALUE2+", "+VALUE3)
+print("Scorns: "+SCORN1+", "+SCORN2+", "+SCORN3)
+print("Persona: "+str(PERSONA1)+", "+str(PERSONA2)+", "+str(PERSONA3))
+print("Skills: "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS))+", "+str(random.choice(SKILLS)))
+print("==========================================================================================")
