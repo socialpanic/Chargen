@@ -1,11 +1,6 @@
 import random
 
-GENDERS = ["Male", "Female"]
-RACES = [
-    "Human","Dwarf","Elf","Orc","Gnome","Tainted","Touched","Half-Orc","Half-Elf","Goblins","Drakkin","Dampyrs"
-]
-
-ALIGNMENT = [
+ALIGNMENTS = [
    "Lawful",
    "Neurtal",
    "Chatoic"
@@ -44,26 +39,134 @@ SKILLS = [
 VALUES = [
     "Community",
     "Adventure",
-    "Charity",
     "Family",
     "Honesty",
     "Rule of Law",
-    "Power",
     "Love",
-    "Travel",
     "Reputation",
     "Knowledge",
     "Religion",
-    "Humor",
     "Leadership",
     "Peace",
     "Vice",
-    "Political Ideology",
+    "Faction",
     "Wealth",
     "Themselves",
     "Culture"
 ]
 
+MONTHS = [
+    "Justicar",
+    "Fairah",
+    "Marth",
+    "Alfar",
+    "Marpha",
+    "J’khull",
+    "Karn",
+    "Vexx",
+    "Sol",
+    "Lyra",
+    "Harth",
+    "Deus",
+]
+
+
+'''AGE = 0
+if RACE == "Elf":
+    AGE = random.randrange(114,134)
+elif RACE == "Dwarf":
+    AGE = random.randrange(43,58)
+elif RACE == "Human":
+    AGE = random.randrange(14,20)
+elif RACE == "Orc":
+    AGE = random.randrange(14,20)
+elif RACE == "Gnome":
+    AGE = random.randrange(44,64)
+elif RACE == "Halfling":
+    AGE = random.randrange(22,28)
+elif RACE == "Half-Orc":
+    AGE = random.randrange(14,20)
+elif RACE == "Half-Elf":
+    AGE = random.randrange(20,26)'''
+
+
+GENDERS = ["Male", "Female"]
+RACES = [
+    "Human",
+    "Dwarf",
+    "Elf",
+    "Halfling",
+    "Gnome",
+    "Orc",
+    "Drakkon",
+    "Tainted",
+    "Touched",
+    "Half Orc",
+    "Half Elf"
+]
+CLASSES = [
+    "Bard",
+    "Assassin",
+    "Barbarian",
+    "Fighter",
+    "Cleric",
+    "Inquisitor",
+    "Druid",
+    "Priest",
+    "Thief",
+    "Monk",
+    "Paladin",
+    "Ranger",
+    "Magic-User",
+    "Warlock",    
+    "Necromancer",
+    "Sorcerer"
+]
+
+HAIRCOLORS = [
+    "Black",
+    "Brown",
+    "Red",
+    "Blonde"
+    "None"
+]
+PERSONAS = [
+    'Friendly',
+    'Grumpy',							
+    'Ethical',				
+    'Dishonest',
+    'Polite',			
+    'Brash',
+    'Confident', 			
+    'Arogant',         
+    'Brave',					
+    'Cowardly',
+    'Diplomatic',			
+    'Violent',
+    'Attractive',		    
+    'Ugly',
+    'Patient',				
+    'Reckless',
+    'Charitable',			
+    'Greedy',
+    'Forgiving',				
+    'Vengeful',        
+    'Obedient',             
+    'Rebellious',
+    'Sociable',			
+    'Reclusive'
+]
+    
+HAIRLENGTHS = [
+    "Long",
+    "Short"
+]
+HAIRSTYLES = [
+    "Wavey",
+    "Straight",
+    "Braided",
+    "Poney Tail"
+]
 MONTHS = [
     "Justicar",
     "Fairah",
@@ -126,126 +229,6 @@ for s in range(NO_OF_SIBS):
     sib = young_or_old+" "+brother_or_sister+" "+alive_or_dead
     SIBLINGS.append(sib)
 
-'''AGE = 0
-if RACE == "Elf":
-    AGE = random.randrange(114,134)
-elif RACE == "Dwarf":
-    AGE = random.randrange(43,58)
-elif RACE == "Human":
-    AGE = random.randrange(14,20)
-elif RACE == "Orc":
-    AGE = random.randrange(14,20)
-elif RACE == "Gnome":
-    AGE = random.randrange(44,64)
-elif RACE == "Halfling":
-    AGE = random.randrange(22,28)
-elif RACE == "Half-Orc":
-    AGE = random.randrange(14,20)
-elif RACE == "Half-Elf":
-    AGE = random.randrange(20,26)'''
-
-
-
-
-
-import random
-GENDERS = ["Male", "Female"]
-RACES = [
-    "Human",
-    "Dwarf",
-    "Elf",
-    "Halfling",
-    "Gnome",
-    "Orc",
-    "Drakkon",
-    "Tainted",
-    "Touched",
-    "Half Orc",
-    "Half Elf"
-]
-CLASSES = [
-    "Bard",
-    "Assassin",
-    "Barbarian",
-    "Fighter",
-    "Cleric",
-    "Inquisitor"
-    "Druid",
-    "Priest",
-    "Thief",
-    "Monk",
-    "Paladin",
-    "Ranger",
-    "Magic-User",
-    "Warlock",    
-    "Necromancer",
-    "Sorcerer",
-   
-]
-VALUES = [
-    "Community", "Family", "Honesty", "Rule of Law", "Power", "Love", "Travel", "Reputation", "Knowledge", "Relgion", "Vice", "Humor", "Leadership", "Peace", "Political Idiology", "Wealth", "Own Ass", "Dignity", "Culture",
-]
-ALIGNMENTS = [
-    "Lawful", "Neutal", "Chaotic"
-]
-HAIRCOLORS = [
-    "Black",
-    "Brown",
-    "Red",
-    "Blonde"
-    "None"
-]
-PERSONAS = [
-    'Friendly',
-    'Grumpy',							
-    'Ethical',				
-    'Dishonest',
-    'Polite',			
-    'Brash',
-    'Confident', 			
-    'Arogant',         
-    'Brave',					
-    'Cowardly',
-    'Diplomatic',			
-    'Violent',
-    'Attractive',		    
-    'Ugly',
-    'Patient',				
-    'Reckless',
-    'Charitable',			
-    'Greedy',
-    'Forgiving',				
-    'Vengeful',        
-    'Obedient',             
-    'Rebellious',
-    'Sociable',			
-    'Reclusive'
-]
-    
-HAIRLENGTHS = [
-    "Long",
-    "Short"
-]
-HAIRSTYLES = [
-    "Wavey",
-    "Straight",
-    "Braided",
-    "Poney Tail"
-]
-MONTHS = [
-    "Justicar",
-    "Fairah",
-    "Marth",
-    "Alfar",
-    "Marpha",
-    "J’khull",
-    "Karn",
-    "Vexx",
-    "Sol",
-    "Lyra",
-    "Harth",
-    "Deus",
-]
 DEADORALIVE = ["Dead", "Alive"]
 RACE = random.choice (RACES)
 HAIRLENGTH = random.choice (HAIRLENGTHS)
@@ -426,7 +409,7 @@ MageClasses = [
     'Warlock'
 ]
 ClericClasses = [
-    'Ceric',
+    'Cleric',
     'Druid',
     'Priest',
     'Inquisitor'
@@ -461,9 +444,9 @@ if CLASS in ClericClasses:
     SpellSave = 15
 
 print("==========================================================================================")
-print("Race: "+RACE+" Class: "+CLASS+" Gender: "+GENDER+"  Alignment: "+str(random.choice(ALIGNMENT))+"DOB: "+str(DOB_MONTH_DAY))
+print("Race: "+RACE+" Class: "+CLASS+" Gender: "+GENDER+"  Alignment: "+ALIGNMENT+"  DOB: "+str(DOB_MONTH_DAY)+"  MORALE: "+str(MORALE))
 print("HP: "+str(HP)+"     "+"COIN: "+str(COIN)+ "    Hair: "+HAIRLENGTH+" "+HAIRCOLOR+" and "+HAIRSTYLE)
-print("STR: "+str(STR)+"("+str(STRMOD)+")"+"  DEX: "+str(DEX)+" ("+str(DEXMOD)+")"+"  INT: "+str(INT)+" ("+str(INTMOD)+")"+"  WIS: "+str(WIS)+" ("+str(WISMOD)+")"+"  CON: "+str(CON)+" ("+str(CONMOD)+")"+"  CHA: "+str(CHA)+" ("+str(CHAMOD)+")")
+print("STR: "+str(STR)+" ("+str(STRMOD)+")"+"  DEX: "+str(DEX)+" ("+str(DEXMOD)+")"+"  INT: "+str(INT)+" ("+str(INTMOD)+")"+"  WIS: "+str(WIS)+" ("+str(WISMOD)+")"+"  CON: "+str(CON)+" ("+str(CONMOD)+")"+"  CHA: "+str(CHA)+" ("+str(CHAMOD)+")")
 print("Saves: Death: "+str(DeathSave)+"  Wands: "+str(WandSave)+"  Paralysis: "+str(ParalysisSave)+"  Breath: "+str(BrathSave)+"  Spells: "+str(SpellSave)+"")
 print("Father: "+str(random.choice(DEADORALIVE)) + "    "+"Mother: "+str(random.choice(DEADORALIVE)))
 print("Siblings: "+str(NO_OF_SIBS))
