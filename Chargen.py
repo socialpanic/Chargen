@@ -40,7 +40,6 @@ VALUES = [
     "Community",
     "Adventure",
     "Family",
-    "Honesty",
     "Rule of Law",
     "Love",
     "Reputation",
