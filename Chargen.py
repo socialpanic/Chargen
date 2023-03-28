@@ -104,22 +104,22 @@ RACES = [
     "Half Elf"
 ]
 CLASSES = [
-    "Bard",
-    "Assassin",
-    "Barbarian",
-    "Fighter",
-    "Cleric",
-    "Inquisitor",
-    "Druid",
-    "Priest",
-    "Thief",
-    "Monk",
-    "Paladin",
-    "Ranger",
-    "Magic-User",
-    "Warlock",    
-    "Necromancer",
-    "Sorcerer"
+    "Bard (Req: Int 11, Cha 13)",
+    "Assassin (Req: Dex 9, Int 9)",
+    "Barbarian (Req: Str 9, Dex 9, Con 9 )",
+    "Fighter (Req: Str 9)",
+    "Cleric (Req: Wis 9)",
+    "Inquisitor (Req: Dex 9, Wis 9, Cha 12)",
+    "Druid (Req: Wis 9)",
+    "Priest (Req: Int 9, Wis 11)",
+    "Thief (Req:Dex 9 )",
+    "Monk (Req: Str 13, Dex 13, Wis 13, Con 9)",
+    "Paladin (Req: Str 9, Wis 11, Cha 11)",
+    "Ranger (Req: Str 9, Dex 11, Wis 11)",
+    "Magic-User (Req: Int 9)",
+    "Warlock (Req: Int 9, Wis 9)",    
+    "Necromancer (Req: Int 11, Wis 9)",
+    "Sorcerer (Req: Cha 13)"
 ]
 
 HAIRCOLORS = [
@@ -390,28 +390,30 @@ SpellSave = 0
 MORALE = 9 + CONMOD
 
 FighterClasses = [
-    'Fighter',
-    'Paladin',
-    'Ranger',
-    'Barbarian'
+    "Fighter (Req: Str 9)",
+    "Paladin (Req: Str 9, Wis 11, Cha 11)",
+    "Ranger (Req: Str 9, Dex 11, Wis 11)",
+    "Barbarian (Req: Str 9, Dex 9, Con 9 )"
 ]
+
 ThiefClasses = [
-    'Thief',
-    'Bard',
-    'Monk',
-    'Assassin'
+    "Thief (Req:Dex 9 )",
+    "Bard (Req: Int 11, Cha 13)",
+    "Monk (Req: Str 13, Dex 13, Wis 13, Con 9)",
+    "Assassin (Req: Dex 9, Int 9)"
 ]
+
 MageClasses = [
-    'Magic-user',
-    'Sorcerer',
-    'Necromancer',
-    'Warlock'
+    "Magic-User (Req: Int 9)",
+    "Sorcerer (Req: Cha 13)",
+    "Warlock (Req: Int 9, Wis 9)",    
+    "Necromancer (Req: Int 11, Wis 9)"
 ]
 ClericClasses = [
-    'Cleric',
-    'Druid',
-    'Priest',
-    'Inquisitor'
+    "Cleric (Req: Wis 9)",
+    "Inquisitor (Req: Dex 9, Wis 9, Cha 12)",
+    "Druid (Req: Wis 9)",
+    "Priest (Req: Int 9, Wis 11)"
 ]
 
 if CLASS in FighterClasses:
